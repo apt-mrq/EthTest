@@ -12,11 +12,11 @@ namespace EthTest
             int invoke_interval = 0;
             Console.WriteLine("Введи время в минутах: ");
             int interVal = Convert.ToInt32(Console.ReadLine()); 
-            Console.WriteLine(interVal.ToString());
             invoke_interval = ((interVal*60)*1000);
             eth_off();
             System.Threading.Thread.Sleep(invoke_interval);
             eth_on();
+            Main(args);
         }
 
         public static void eth_off()
